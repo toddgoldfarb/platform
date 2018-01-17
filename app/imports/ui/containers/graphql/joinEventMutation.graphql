@@ -1,0 +1,3 @@
+mutation joinEvent($username: String, $slug: String) {
+  joinEvent(input: { username: $username, slug: $slug })
+}

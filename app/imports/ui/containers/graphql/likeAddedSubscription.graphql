@@ -1,0 +1,10 @@
+subscription onLikeAdded($eventId: ID!) {
+  likeAdded(eventId: $eventId) {
+    _id
+    userId
+    startLatlng
+    endLatlng
+    objectId
+    createdAt
+  }
+}

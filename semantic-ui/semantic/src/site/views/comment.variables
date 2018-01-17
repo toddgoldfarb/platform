@@ -1,0 +1,14 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+@commentBackground: @offWhite;
+
+@authorColor: @globalColor-4;
+@metadataColor: @globalColor-6;
+@metadataFontSize: 0.66em;
+
+@firstCommentPadding: @commentPadding;
+@commentPadding: .66em 1em .66em .66em;
+
+@avatarBorderRadius: 2rem;

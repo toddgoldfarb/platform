@@ -1,0 +1,14 @@
+query intentionsQuery($eventId: ID!) {
+  intentions(eventId: $eventId, limit: 100) {
+    _id
+    text
+    userId
+    userName
+    userAvatar
+    userLocation
+    ampCount
+    createdAt
+    userAmplified
+    pinned
+  }
+}

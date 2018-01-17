@@ -1,0 +1,31 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+.ui.header{
+  &.header-icon{
+    background: @globalColor-1;
+    margin-top: 0;
+    .inner-container{
+      box-shadow: inset 0px 8px 0 @globalColor-5;
+      margin:auto;
+      max-width: @contentWidthDesktop;
+      padding: 30px 10px;
+    }
+    .icon{
+      color: @globalColor-8;
+      width: 56px;
+      text-align: center;
+      font-size: 1.4em;
+    }
+    .content{
+      color: #fff;
+      font-weight: 200;
+    }
+    .sub.header{
+      color: @globalColor-9;
+      font-weight: 400;
+      padding-top: 6px;
+    }
+  } 
+}

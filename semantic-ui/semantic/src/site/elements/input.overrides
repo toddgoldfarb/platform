@@ -1,0 +1,20 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+/*-------------------
+      Element
+--------------------*/
+/*
+@background: @inputBackground;
+@borderWidth: 1px;
+@borderColor: @globalColor-6;
+@border: @borderWidth solid @borderColor;
+@boxShadow: none;
+*/
+
+/* Focus */
+@focusBorderColor: @globalColor-2;
+//@focusBackground: @background;
+//@focusColor: @hoveredTextColor;
+@focusBoxShadow: inset 4px 4px 4px fade(@globalColor-4,20%);

@@ -1,0 +1,272 @@
+/*******************************
+         Site Overrides
+*******************************/
+
+body{
+  background: @bodyBackground;
+}
+
+/**
+ * Registation Page
+ */
+@amp-box-shadow-md: 4px 4px 0 fade(@globalColor-1, 50%);
+
+.ui.registration-page{
+  background: @globalColor-2;
+  padding-top: 10px;
+  padding-bottom: 60px;
+  border-bottom-left-radius: @defaultBorderRadius;
+  border-bottom-right-radius: @defaultBorderRadius;
+  .ui.inner-wrapper{
+    margin: auto;
+    max-width: 420px;
+    padding: 0 10px;
+  }
+  .ui.card{
+    box-shadow: @amp-box-shadow-md;
+  }
+  .ui.page-head{
+    padding-bottom: 5px;
+    .logo{
+      margin: auto;
+      img{
+        display: block;
+        max-width: 220px;
+        width: 61.8%;
+        height: auto;
+        margin: auto;
+      }
+    }
+  }
+  button.button.fluid{
+    padding: 16px;
+    font-size: 1.1em;
+  }
+  .ui.signin-buttons{
+    button{
+      box-shadow: @amp-box-shadow-md;
+      margin: 15px 0;
+      font-weight: 200;
+      .icon{
+        font-size: 1.2em;
+      }
+    }
+  }
+}
+
+/**
+ * Header Dark-Background
+ */
+.ui.header.header-dark{
+  color: @globalColor-9;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 300;
+  margin: 10px 0 10px;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+}
+
+/**
+ * Form Inside Card
+ */
+.ui.card.form{
+  background-color: @offWhite;
+  color: @globalColor-4;
+  padding: 2em 1.5em;
+  .field{
+    label{
+      font-size: 1.1em;
+      font-weight: 400;
+    }
+  }
+}
+
+/**
+ * Secondary Button
+ */
+button.ui.secondary.button{
+  padding: 15px 20px;
+  font-weight: 300;
+}
+
+/**
+ * User Profile
+ */
+.ui.user-profile{
+  background: @offWhite;
+  padding: 2em;
+  border-bottom-left-radius: @defaultBorderRadius;
+  border-bottom-right-radius: @defaultBorderRadius;
+}
+
+/**
+ * Intention List
+ */
+.ui.input.input-intention{
+  input{
+    border: 1px solid @globalColor-9;
+    //box-shadow: inset 2px 2px 6px fade(@globalColor-5);
+  }
+}
+
+.ui.intention-list{
+  .amplify-button{
+    margin: .66em 0;
+    .ui.icon.button{
+      padding: .75em 1.66em 1em 1.2em;
+      .icon{
+        -webkit-font-smoothing: auto;
+        font-size: 1.15em;
+        line-height: 1.2;
+        vertical-align: baseline;
+      }
+    }
+  }
+  .comment{
+    border-radius: @defaultBorderRadius;
+  }
+}
+
+/**
+ * Event Control
+ */
+
+.ui.menu.event-control{
+  .item{
+    &.play-control{
+      width: 16%;
+      &.active{
+        background: @globalColor-5;
+      }
+    }
+    display: block !important;
+    width: 28%;
+    overflow: hidden;
+    text-align: center;
+    padding: 1em .25em;
+    color: #fff;
+  }
+}
+
+/**
+ * Desktop Header
+ */
+.ui.desktop-header{
+  height: 64px;
+  background-color: @globalColor-4;
+  border-bottom: 1px solid @globalColor-5;
+  .top.menu.inner-container{
+    margin: auto;
+    position: relative;
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    .item{
+      font-size: 1.33rem;
+      padding: .2em 1.2em;
+      color: #fff;
+    }
+  }
+  &.fluid .inner-container{
+    max-width: none;
+  }
+  .inner-container{
+    max-width: @contentWidthDesktop;
+  }
+  .header-logo{
+    .ui.image{
+      height: 64px;
+      width: auto;
+      margin-right: 1em;
+    }
+  }
+  .ui.avatar.image{
+    margin-right: 0;
+    margin-left: .66em;
+    border: 1px solid @globalColor-5;
+  }
+}
+
+/**
+ * Featured Event Card
+ */
+.ui.featured-event-card{
+  .ui.card{
+    margin-top: 2.6em;
+    padding: 0 1.33em;
+    background-color: @offWhite;
+  }
+  
+  .image.bordered{
+    border: 1px solid #fff;
+    border-radius: @defaultBorderRadius;
+  }
+  .ui.button{
+    .icon{
+      font-size: 1.2em;
+      vertical-align: bottom;
+      -webkit-font-smoothing: auto;
+    }
+  }
+}
+
+/**
+ * Sub-header
+ */
+.ui .header .subheader{
+  color: @globalColor-5;
+  font-size: medium;
+  font-weight: 400;
+}
+
+/**
+ * Discovered Event List
+ */
+.ui.discover-event-list{
+  background: @white;
+  padding: 2em 1em 1em;
+  border-radius: @defaultBorderRadius;
+}
+
+
+/**
+ * Filter Menu
+ */
+.ui.filter-menu{
+  margin-top: 1em;
+  .ui.secondary.pointing.menu{
+    margin-bottom: 0;
+    border: none;
+    .item{
+      font-size: large;
+      font-weight: lighter;
+      color: @globalColor-9;
+      &:hover{
+        color: #fff;
+      }
+    }
+    .active.item{
+      background-color: @white;
+      color: @globalColor-4;
+      border-top-left-radius: @defaultBorderRadius;
+      border-top-right-radius: @defaultBorderRadius;
+      border:none;
+      font-weight: normal;
+    }
+  }
+
+}
+
+/**
+ * Admin Page
+ */
+.ui.container.admin{
+  background: #fff;
+  h1.ui.header{
+    margin-top: .8em;
+  }
+  .ui.admin.events{
+    padding: 2em;
+  }
+}

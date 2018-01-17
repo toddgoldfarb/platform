@@ -1,0 +1,212 @@
+scalar Date
+
+type Event {
+  _id: ID!
+  title: String
+  slug: String
+  description: String
+  userId: String
+  username: String
+  hostName: String
+  imageUrl: String
+  contentType: String
+  trackUrl: String
+  youtubeUrl: String
+  youtubeVideoId: String
+  published: Boolean
+  startAt: Date
+  endAt: Date
+  live: Boolean
+  past: Boolean
+  host: User
+  library: Boolean
+  authorized: Boolean
+  rebroadcast: Boolean
+  isPublic: Boolean
+  joined: Boolean
+  intentions: [Intention]
+  isOwner: Boolean
+  name: String
+  path: String
+  managePath: String
+  editPath: String
+  liveStream: Boolean
+  attendees(filter: AttendeesFilter): [Attendee]
+  onlineCount: Int
+}
+
+type Package {
+  _id: ID!
+
+  users: [User]!
+
+  name: String!
+  description: String
+
+  # the user role assigned after purchase/subscription
+  role: String!
+
+  # one or the other must be defined
+  stripeSkuId: ID
+  stripePlanId: ID
+
+  # billed amount/interval unless its oneTime
+  amount: Int!
+  oneTime: Boolean!
+  interval: String
+}
+
+type Attendee {
+  _id: ID!
+  eventId: ID!
+  userId: ID!
+  firstSeenAt: Date!
+  lastSeenAt: Date!
+  active: Boolean!
+  duration: Int
+  # computed fields
+  user: User
+  event: Event
+}
+
+type Intention {
+  _id: ID!
+  userId: String
+  userName: String
+  userAvatar: String
+  userLocation: String
+  userLatlng: String
+  eventId: String
+  text: String
+  ampCount: Int
+  pinned: Boolean
+  createdAt: Date
+  userAmplified: Boolean
+}
+
+type Like {
+  _id: ID!
+  userId: ID!
+  objectId: ID!
+  createdAt: Date!
+  startLatlng: [String]
+  endLatlng: [String]
+}
+
+type Email {
+  address: String
+  verified: Boolean
+},
+
+type User {
+  _id: ID!
+  name: String
+  username: String
+  self: Boolean
+  emails: [Email]
+  email: String
+  avatar: String
+  location: String
+  latlng: [String]
+  description: String
+  shortDescription: String
+  location: String
+  upcomingEvents: [Event]
+  pastEvents: [Event]
+  libraryEvents: [Event]
+  draftEvents: [Event]
+  roles: [String]
+  admin: Boolean
+  packageId: ID
+  package: Package
+},
+
+input EventFilter {
+  live: Boolean
+  past: Boolean
+  rebroadcast: Boolean
+  library: Boolean
+  published: Boolean
+  isPublic: Boolean
+  published: Boolean
+}
+
+input AttendeesFilter {
+  eventId: ID
+  active: Boolean
+  userId: ID
+}
+
+input Sort {
+  field: String
+  direction: Int
+}
+
+type Query {
+  teachers: [User]
+  admins: [User]
+  providers: [User]
+
+  packages: [Package]
+
+  user(username: String): User
+  event(_id: String, username: String, slug: String): Event
+
+  libraryEvents: [Event]
+
+  events(filter: EventFilter, sort: Sort): [Event]
+
+  liveEvents: [Event]
+  nonLiveEvents(past: Boolean!): [Event]
+
+  intentions(eventId: ID!, limit: Int): [Intention]
+
+  attendees(filter: AttendeesFilter): [Attendee]
+}
+
+type Mutation {
+  joinEvent(input: JoinEventInput!): Boolean
+  partEvent(input: PartEventInput!): Boolean
+  postIntention(input: PostIntentionInput!): PostIntentionPayload
+  amplifyIntention(input: AmplifyIntentionInput!): AmplifyIntentionPayload
+  pinIntention(input: PinIntentionInput!): PinIntentionPayload
+}
+
+input JoinEventInput {
+  eventId: ID
+  username: String
+  slug: String
+}
+
+input PartEventInput {
+  eventId: ID
+  username: String
+  slug: String
+}
+
+input PostIntentionInput {
+  eventId: ID!
+  text: String!
+}
+type PostIntentionPayload {
+  intention: Intention
+}
+
+input AmplifyIntentionInput {
+  intentionId: ID!
+}
+type AmplifyIntentionPayload {
+  intention: Intention
+}
+
+input PinIntentionInput {
+  intentionId: ID!
+}
+type PinIntentionPayload {
+  intention: Intention
+}
+
+type Subscription {
+  intentionAdded(eventId: ID!): Intention
+  likeAdded(eventId: ID!): Like
+}

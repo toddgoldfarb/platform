@@ -1,0 +1,32 @@
+general:
+  branches:
+    ignore:
+      - gh-pages
+
+machine:
+  node:
+    version: 5.5.0
+
+checkout:
+  post:
+    - git submodule sync
+    - git submodule update --init
+
+dependencies:
+  cache_directories:
+    - ~/.meteor
+  override:
+    - meteor || curl https://install.meteor.com | /bin/sh
+    - cd app && meteor npm install
+test:
+   override:
+      - make -C app test-ci
+deployment:
+  staging:
+    branch: "master"
+    commands:
+      - make -C app deploy-staging
+  production:
+    branch: "production"
+    commands:
+      - make -C app deploy-production

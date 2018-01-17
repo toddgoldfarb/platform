@@ -1,0 +1,77 @@
+/*******************************
+     User Global Variables
+*******************************/
+
+@violet           : #2c2b6b;
+@teal             : #5ac8fa;
+@green            : #3cc691;
+@blue             : @globalColor-6;
+@primaryColor     : @orange;
+@secondaryColor   : @globalColor-3;
+@offWhite                 : #e6e6f6;
+@bodyBackground   : @globalColor-2;
+@textColor        : @globalColor-3;
+//@pageBackground   : #1f1e4b;
+/* @textColor        : #fff; */
+@hoveredTextColor : darken(@textColor, 5);
+
+@facebookColor            : #3B5998;
+@facebookHoverColor   : saturate(lighten(@facebookColor, 5), 10, relative);
+
+@googleFontSizes   : '200,300,400,700,400italic,700italic';
+
+@contentWidthDesktop: 1040px;
+
+/* @inputBackground : @violet; */
+/* @inputColor: @textColor; */
+@inputPlaceholderColor: lighten(@inputColor, 45);
+@inputPlaceholderFocusColor: lighten(@inputColor, 60);
+
+@imagePath : '/semantic-ui/images';
+@fontPath  : '/semantic-ui/fonts';
+
+//@headerFontWeight : 200;
+
+/**
+ * Amplifield Brand colors
+ */
+@globalColor-0 : #0d0d20;
+@globalColor-1 : #151533;
+@globalColor-2 : #1f1e4b;
+@globalColor-3 : #2c2b6b;
+@globalColor-4 : #4240a0;
+@globalColor-5 : #5856d6;
+@globalColor-6 : #597ce2;
+@globalColor-7 : #679cf1;
+@globalColor-8 : #5ac8fa;
+@globalColor-9 : #ace3fc;
+
+
+
+/*-------------------
+      Borders
+--------------------*/
+
+/*
+@circularRadius                : 500rem;
+
+@borderColor               : @globalColor-8;
+@strongBorderColor         : rgba(34, 36, 38, 0.22);
+@internalBorderColor       : rgba(34, 36, 38, 0.1);
+@selectedBorderColor       : rgba(34, 36, 38, 0.35);
+@strongSelectedBorderColor : rgba(34, 36, 38, 0.5);
+@disabledBorderColor       : rgba(34, 36, 38, 0.5);
+
+@solidInternalBorderColor  : #FAFAFA;
+@solidBorderColor          : #D4D4D5;
+@solidSelectedBorderColor  : #BCBDBD;
+
+@whiteBorderColor              : rgba(255, 255, 255, 0.1);
+@selectedWhiteBorderColor      : rgba(255, 255, 255, 0.8);
+
+@solidWhiteBorderColor         : #555555;
+@selectedSolidWhiteBorderColor : #999999;
+*/
+
+/* Used on inputs, textarea etc */
+@focusedFormBorderColor: @globalColor-5;

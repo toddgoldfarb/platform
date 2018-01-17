@@ -1,0 +1,33 @@
+image
+
+title
+description
+creator
+
+startat - until
+countdown until start, countdown until end, since ended
+actions: rsvp, share, join, rebroadcast
+rsvp count, online count
+
+* admin event card
+** past
+** live
+** future
+
+* modal event card
+** past: rebroadcast
+** live: join, share
+** future: rsvp, share
+
+* explorer featured card
+** live: join, share
+
+* temple player card
+** live
+
+
+* explorer list item
+** past
+** live
+** future
+

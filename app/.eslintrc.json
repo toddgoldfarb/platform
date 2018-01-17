@@ -1,0 +1,43 @@
+{
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true,
+      "jsx": true
+    }
+  },
+  "plugins": [
+    "meteor",
+    "import"
+  ],
+  "settings": {
+    "import/resolver": {
+      "meteor": {
+        "extensions": [ ".js", ".jsx" ]
+      }
+    },
+    "moduleDirectory": [
+      "node_modules"
+    ]
+  },
+  "extends": [
+    "airbnb",
+    "plugin:meteor/recommended"
+  ],
+  "rules": {
+    "prefer-arrow-callback": ["off", { "allowNamedFunctions": true }],
+    "no-underscore-dangle": ["error", { "allow": ["_id", "_ensureIndex", "_transform", "_execute"],
+                                        "allowAfterThis": true }],
+    "import/no-unresolved": ["error", { "ignore": ["^meteor/"] }],
+    "meteor/no-session": ["off"],
+    "meteor/template-names": ["off"],
+    "func-names": ["off"],
+    "arrow-body-style": ["off"],
+    "react/prefer-stateless-function": ["off"],
+    "react/jsx-indent-props": ["off"],
+    "react/jsx-indent": ["off"],
+    "react/jsx-closing-bracket-location": ["off"],
+    "no-shadow": ["off"]
+  }
+}

@@ -1,0 +1,3 @@
+mutation partEvent($username: String, $slug: String) {
+  partEvent(input: { username: $username, slug: $slug })
+}

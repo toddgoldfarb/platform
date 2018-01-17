@@ -1,0 +1,17 @@
+mutation postIntention($eventId: ID!, $text: String!) {
+  postIntention(input: { eventId: $eventId, text: $text }) {
+    intention {
+      _id
+      text
+      eventId
+      userId
+      userName
+      userAvatar
+      userLocation
+      ampCount
+      createdAt
+      userAmplified
+      pinned
+    }
+  }
+}

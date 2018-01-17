@@ -1,0 +1,9 @@
+mutation amplifyIntention($intentionId: ID!) {
+  amplifyIntention(input: { intentionId: $intentionId }) {
+    intention {
+      _id
+      ampCount
+      userAmplified
+    }
+  }
+}

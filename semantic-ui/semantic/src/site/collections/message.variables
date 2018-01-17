@@ -1,0 +1,6 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+@background: @offWhite;
+@borderWidth: 1px;
+@borderShadow: 0px 0px 0px @borderWidth fade(@globalColor-6,33%) inset;

@@ -1,0 +1,16 @@
+query activeAttendees {
+  attendees(filter: { active: true }) {
+    _id
+    active
+    duration
+    lastSeenAt
+    user {
+      name
+      username
+    }
+    event {
+      title
+      path
+    }
+  }
+}

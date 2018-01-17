@@ -1,0 +1,6 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+/* Link */
+@linkHoverRaiseDistance: 0px;

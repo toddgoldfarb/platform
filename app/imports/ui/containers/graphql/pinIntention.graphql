@@ -1,0 +1,8 @@
+mutation pinIntention($intentionId: ID!) {
+  pinIntention(input: { intentionId: $intentionId }) {
+    intention {
+      _id
+      pinned
+    }
+  }
+}

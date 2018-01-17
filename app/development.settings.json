@@ -1,0 +1,18 @@
+{
+  "S3Bucket": "amplifield-dev",
+  "AWSRegion": "us-west-2",
+  "AWSAccessKeyId": "AKIAJL2OUXCRQYGEN2UA",
+  "AWSSecretAccessKey": "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",
+  "facebookAppId": "469297003195383",
+  "facebookSecret": "2f6c8c3f84809c0d74c019f4225a9bb6",
+  "feedbackEmail": "nobody@example.com",
+  "stripe_sk": "sk_test_kaoRy4WvqEYKJDagddWLfOi8",
+  "public": {
+    "segmentKey": "rVefOSyRYmXDkpR5Y9Lb20zxFxr4C0SS",
+    "stripe_pk": "pk_test_fIQUqMDRSPCm1gT5EaqUDnx3"
+  },
+  "redis": {
+    "host": "localhost",
+    "port": 6379
+  }
+}

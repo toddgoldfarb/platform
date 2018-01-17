@@ -1,0 +1,37 @@
+query playerEventQuery($username: String, $slug: String) {
+  event(username: $username, slug: $slug) {
+    _id
+    title
+    description
+    host {
+      username
+      latlng
+    }
+    isOwner
+    authorized
+    contentType
+    youtubeVideoId
+    trackUrl
+    imageUrl
+    username
+    hostName
+    joined
+    startAt
+    endAt
+    live
+    past
+    isPublic
+    name
+    path
+    managePath
+    liveStream
+    onlineCount
+    attendees(filter: { active: true }) {
+      user {
+        username
+        latlng
+        self
+      }
+    }
+  }
+}

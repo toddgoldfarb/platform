@@ -1,0 +1,13 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+/*--------------
+    Celled
+---------------*/
+
+@celledBorderColor: @globalColor-4;
+
+@celledGridDivider: 0px 0px 0px @celledWidth @celledBorderColor;
+@celledRowDivider: 0px (-@celledWidth) 0px 0px @celledBorderColor;
+@celledColumnDivider: (-@celledWidth) 0px 0px 0px @celledBorderColor, (@celledWidth) 0px 0px 0px @celledBorderColor;

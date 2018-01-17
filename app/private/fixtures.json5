@@ -1,0 +1,28 @@
+{
+  EasyEvents: [
+    {
+      _id: "mCzuRdhXzhxpavwww",
+      title: "Focus",
+      description: "Motivate yourself by gaining clarity of purpose",
+      trackUrl: "https://s3-us-west-2.amazonaws.com/amplifield/sounds/gamma-burst.mp3",
+      imageUrl: "https://s3-us-west-2.amazonaws.com/amplifield/music-icons/flow-256.jpg",
+      status: 'live',
+    },
+    {
+      _id: "ci2gygRhXD9kzgjwX",
+      title: "Prayer for Syria",
+      description: "Motivate yourself by gaining clarity of purpose",
+      trackUrl: "https://s3-us-west-2.amazonaws.com/amplifield/sounds/gamma-burst.mp3",
+      imageUrl: "https://s3-us-west-2.amazonaws.com/amplifield/music-icons/flow-256.jpg",
+      status: 'live',
+    },
+    {
+      _id: "K8nTPwXywbnooD9jJ",
+      title: "Standing Rock",
+      description: "Motivate yourself by gaining clarity of purpose",
+      trackUrl: "https://s3-us-west-2.amazonaws.com/amplifield/sounds/gamma-burst.mp3",
+      imageUrl: "https://s3-us-west-2.amazonaws.com/amplifield/music-icons/flow-256.jpg",
+      status: 'live',
+    }
+  ]
+}

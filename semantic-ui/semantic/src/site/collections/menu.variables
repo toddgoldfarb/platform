@@ -1,0 +1,16 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+@itemFontWeight: 300;
+
+/* Hovered Item */
+@hoverItemBackground: @globalColor-5;
+@hoverItemTextColor: #fff;
+
+/* Pressed Item */
+@pressedItemBackground: @globalColor-8;
+@pressedItemTextColor: #fff;
+
+/* Inverted */
+@invertedBackground: @globalColor-4;
+@invertedDividerBackground: @globalColor-2;

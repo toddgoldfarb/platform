@@ -1,0 +1,14 @@
+/*******************************
+    User Variable Overrides
+*******************************/
+
+@labelColor: @globalColor-5;
+
+@inputFontSize: 1.1em;
+
+@inputBorder: 1px solid @globalColor-7;
+
+//@inputFocusBorderColor: @globalColor-5;
+
+@inputFocusBoxShadow: .1em .1em .33em fade(@globalColor-5,33%) inset;
+
